@@ -10,7 +10,7 @@ source:
   sha256: 9a567b45ece1930e65803411f12736d8925f0d1adbc31e962cb5c441969940f0
 
 build:
-  number: 1
+  number: 1001
   skip: True  # [osx]
   script: make PREFIX={{ PREFIX }} install
 
