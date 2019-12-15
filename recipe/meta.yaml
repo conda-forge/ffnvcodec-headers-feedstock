@@ -1,5 +1,5 @@
 {% set name = 'ffnvcodec-headers' %}
-{% set version = '8.2.15.4' %}
+{% set version = "9.1.23.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: 'https://github.com/FFmpeg/nv-codec-headers/releases/download/n{{ version }}/nv-codec-headers-{{ version }}.tar.gz'
-  sha256: 9a567b45ece1930e65803411f12736d8925f0d1adbc31e962cb5c441969940f0
+  sha256: 7a1734e586799bceb9d8dbd6406d3c274159bab18a766907e9f187b208e79d61
 
 build:
-  number: 1001
+  number: 0
   skip: True  # [osx]
   script: make PREFIX={{ PREFIX }} install
 
