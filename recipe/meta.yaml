@@ -1,17 +1,17 @@
-{% set name = 'ffnvcodec-headers' %}
-{% set version = "9.1.23.1" %}
+{% set name = "ffnvcodec-headers" %}
+{% set version = "10.0.26.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: 'https://github.com/FFmpeg/nv-codec-headers/releases/download/n{{ version }}/nv-codec-headers-{{ version }}.tar.gz'
-  sha256: 7a1734e586799bceb9d8dbd6406d3c274159bab18a766907e9f187b208e79d61
+  url: https://github.com/FFmpeg/nv-codec-headers/releases/download/n{{ version }}/nv-codec-headers-{{ version }}.tar.gz
+  sha256: 2552723fef0adbed1c327e9cca167226b35d8a5d17fb86c753b71d70b26f141c
 
 build:
   number: 0
-  skip: True  # [osx]
+  skip: true  # [osx]
   script: make PREFIX={{ PREFIX }} install
 
 requirements:
@@ -22,18 +22,18 @@ requirements:
 
 test:
   commands:
-     - test -f ${PREFIX}/include/ffnvcodec/dynlink_cuda.h      # [unix]
-     - test -f ${PREFIX}/include/ffnvcodec/dynlink_cuviddec.h  # [unix]
-     - test -f ${PREFIX}/include/ffnvcodec/dynlink_loader.h    # [unix]
-     - test -f ${PREFIX}/include/ffnvcodec/dynlink_nvcuvid.h   # [unix]
-     - test -f ${PREFIX}/include/ffnvcodec/nvEncodeAPI.h       # [unix]
-     - test -f ${PREFIX}/lib/pkgconfig/ffnvcodec.pc            # [unix]
+    - test -f ${PREFIX}/include/ffnvcodec/dynlink_cuda.h       # [unix]
+    - test -f ${PREFIX}/include/ffnvcodec/dynlink_cuviddec.h   # [unix]
+    - test -f ${PREFIX}/include/ffnvcodec/dynlink_loader.h     # [unix]
+    - test -f ${PREFIX}/include/ffnvcodec/dynlink_nvcuvid.h    # [unix]
+    - test -f ${PREFIX}/include/ffnvcodec/nvEncodeAPI.h        # [unix]
+    - test -f ${PREFIX}/lib/pkgconfig/ffnvcodec.pc             # [unix]
 
 about:
   home: https://git.videolan.org/?p=ffmpeg/nv-codec-headers.gi
   license: MIT
   license_file: LICENSE
-  summary: 'FFmpeg version of headers required to interface with Nvidias codec APIs'
+  summary: FFmpeg version of headers required to interface with Nvidias codec APIs
   description: |
     FFmpeg version of headers required to interface with Nvidias codec APIs.
 
