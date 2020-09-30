@@ -1,5 +1,5 @@
 {% set name = "ffnvcodec-headers" %}
-{% set version = "10.0.26.0" %}
+{% set version = "10.0.26.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/FFmpeg/nv-codec-headers/releases/download/n{{ version }}/nv-codec-headers-{{ version }}.tar.gz
-  sha256: 2552723fef0adbed1c327e9cca167226b35d8a5d17fb86c753b71d70b26f141c
+  sha256: ed25953eee1568b2ee22042612c6a8b0aaffa2cdccc92b4ece123e420a981466
 
 build:
   number: 0
