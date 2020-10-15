@@ -5,7 +5,7 @@ Home: https://git.videolan.org/?p=ffmpeg/nv-codec-headers.gi
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ffnvcodec-headers-feedstock/blob/master/LICENSE.txt)
 
 Summary: FFmpeg version of headers required to interface with Nvidias codec APIs
 
