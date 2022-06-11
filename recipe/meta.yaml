@@ -10,7 +10,7 @@ source:
   sha256: a28cdde3ac0e9e02c2dde7a1b4de5333b4ac6148a8332ca712da243a3361a0d9
 
 build:
-  number: 0
+  number: 1
   skip: true  # [osx]
   script: make PREFIX={{ PREFIX }} install
 
@@ -30,7 +30,7 @@ test:
     - test -f ${PREFIX}/lib/pkgconfig/ffnvcodec.pc             # [unix]
 
 about:
-  home: https://git.videolan.org/?p=ffmpeg/nv-codec-headers.gi
+  home: https://git.videolan.org/?p=ffmpeg/nv-codec-headers.git
   license: MIT
   license_file: LICENSE
   summary: FFmpeg version of headers required to interface with Nvidias codec APIs
