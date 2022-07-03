@@ -10,14 +10,14 @@ source:
   sha256: a28cdde3ac0e9e02c2dde7a1b4de5333b4ac6148a8332ca712da243a3361a0d9
 
 build:
-  number: 1
+  number: 2
   skip: true  # [osx]
-  script: make PREFIX={{ PREFIX }} install
+  script: make PREFIX={{ PREFIX }} install          # [unix]
+  script: make PREFIX={{ PREFIX }}/Library install  # [win]
 
 requirements:
   build:
-    # git provides the sed command
-    - git   # [win]
+    - m2-sed  # [win]
     - make
 
 test:
@@ -28,6 +28,12 @@ test:
     - test -f ${PREFIX}/include/ffnvcodec/dynlink_nvcuvid.h    # [unix]
     - test -f ${PREFIX}/include/ffnvcodec/nvEncodeAPI.h        # [unix]
     - test -f ${PREFIX}/lib/pkgconfig/ffnvcodec.pc             # [unix]
+    - if not exist %PREFIX%\\Library\\include\\ffnvcodec\\dynlink_cuda.h exit 1      # [win]
+    - if not exist %PREFIX%\\Library\\include\\ffnvcodec\\dynlink_cuviddec.h exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\include\\ffnvcodec\\dynlink_loader.h exit 1    # [win]
+    - if not exist %PREFIX%\\Library\\include\\ffnvcodec\\dynlink_nvcuvid.h exit 1   # [win]
+    - if not exist %PREFIX%\\Library\\include\\ffnvcodec\\nvEncodeAPI.h exit 1       # [win]
+    - if not exist %PREFIX%\\Library\\lib\\pkgconfig\\ffnvcodec.pc exit 1            # [win]
 
 about:
   home: https://git.videolan.org/?p=ffmpeg/nv-codec-headers.git
@@ -35,17 +41,11 @@ about:
   license_file: LICENSE
   summary: FFmpeg version of headers required to interface with Nvidias codec APIs
   description: |
-    FFmpeg version of headers required to interface with Nvidias codec APIs.
-
-    Corresponds to Video Codec SDK version 8.2.25.
+    Corresponds to Video Codec SDK version 11.1.5.
 
     Minimum required driver versions:
-    Linux: 396.24 or newer
-    Windows: 397.93 or newer
-
-    Optional CUDA 10 features:
-    Linux: 410.48 or newer
-    Windows: 411.31 or newer
+    Linux: 470.57.02 or newer
+    Windows: 471.41 or newer
 
 extra:
   recipe-maintainers:
