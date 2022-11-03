@@ -9,17 +9,11 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ffnvcodec-heade
 
 Summary: FFmpeg version of headers required to interface with Nvidias codec APIs
 
-FFmpeg version of headers required to interface with Nvidias codec APIs.
-
-Corresponds to Video Codec SDK version 8.2.25.
+Corresponds to Video Codec SDK version 11.1.5.
 
 Minimum required driver versions:
-Linux: 396.24 or newer
-Windows: 397.93 or newer
-
-Optional CUDA 10 features:
-Linux: 410.48 or newer
-Windows: 411.31 or newer
+Linux: 470.57.02 or newer
+Windows: 471.41 or newer
 
 
 Current build status
@@ -43,14 +37,14 @@ Current build status
               <td>linux_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5117&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ffnvcodec-headers-feedstock?branchName=main&jobName=linux&configuration=linux_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ffnvcodec-headers-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>win_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5117&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ffnvcodec-headers-feedstock?branchName=main&jobName=win&configuration=win_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ffnvcodec-headers-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>
