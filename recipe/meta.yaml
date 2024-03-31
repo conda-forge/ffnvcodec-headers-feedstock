@@ -12,8 +12,8 @@ source:
 build:
   number: 0
   skip: true  # [osx]
-  script: make PREFIX={{ PREFIX }} install  # [unix]
-  script: make PREFIX={{ PREFIX }}/Library install  # [win]
+  script: make PREFIX=${PREFIX} install  # [unix]
+  script: make PREFIX=%LIBRARY_PREFIX% install  # [win]
 
 requirements:
   build:
