@@ -19,6 +19,8 @@ requirements:
   build:
     - m2-sed  # [win]
     - make
+    # Otherwise the PREFIX doesn't seem to be correctly setup for windows
+    - {{ compiler('c') }}
 
 test:
   commands:
