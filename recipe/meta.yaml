@@ -13,7 +13,7 @@ build:
   number: 0
   skip: true  # [osx]
   script: make PREFIX=${PREFIX} install  # [unix]
-  script: make PREFIX=%LIBRARY_PREFIX% install  # [win]
+  script: make PREFIX=%CYGWIN_PREFIX%/Library install  # [win]
 
 requirements:
   build:
