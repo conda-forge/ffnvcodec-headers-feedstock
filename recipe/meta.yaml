@@ -1,8 +1,7 @@
-{% set name = "ffnvcodec-headers" %}
 {% set version = "12.2.72.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: ffnvcodec-headers
   version: {{ version }}
 
 source:
@@ -20,8 +19,6 @@ requirements:
     - autotools_clang_conda  # [win]
     - m2-sed                 # [win]
     - make
-    # Otherwise the PREFIX doesn't seem to be correctly setup for windows
-    # - {{ compiler('c') }}
 
 test:
   commands:
