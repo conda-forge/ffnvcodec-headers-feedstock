@@ -16,7 +16,7 @@ build:
 
 requirements:
   build:
-    - autotools_clang_conda  # [win]
+    # - autotools_clang_conda  # [win]
     - m2-sed                 # [win]
     - make
 
