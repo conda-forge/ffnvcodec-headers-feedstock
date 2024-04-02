@@ -13,7 +13,6 @@ build:
   number: 0
   skip: true  # [osx]
   script: make PREFIX=${PREFIX} install  # [unix]
-  # script: make PREFIX=%CYGWIN_PREFIX%/Library install  # [win]
   script: make PREFIX=%LIBRARY_PREFIX% install  # [win]
 
 requirements:
@@ -22,7 +21,7 @@ requirements:
     - m2-sed                 # [win]
     - make
     # Otherwise the PREFIX doesn't seem to be correctly setup for windows
-    - {{ compiler('c') }}
+    # - {{ compiler('c') }}
 
 test:
   commands:
