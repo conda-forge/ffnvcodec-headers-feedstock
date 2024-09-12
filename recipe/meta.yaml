@@ -18,9 +18,10 @@ requirements:
   build:
     # - autotools_clang_conda  # [win]
     # - posix                  # [win]
-    - m2-make                # [win]
+    # - m2-make                # [win]
     - m2-sed                 # [win]
-    - make                   # [unix]
+    # - make                   # [unix]
+    - make
 
 test:
   commands:
