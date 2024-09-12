@@ -11,16 +11,12 @@ source:
 build:
   number: 0
   skip: true  # [osx]
-  script: make PREFIX=${PREFIX} install  # [unix]
+  script: make PREFIX=${PREFIX} install         # [unix]
   script: make PREFIX=%LIBRARY_PREFIX% install  # [win]
 
 requirements:
   build:
-    # - autotools_clang_conda  # [win]
-    # - posix                  # [win]
-    # - m2-make                # [win]
-    - m2-sed                 # [win]
-    # - make                   # [unix]
+    - m2-sed  # [win]
     - make
 
 test:
