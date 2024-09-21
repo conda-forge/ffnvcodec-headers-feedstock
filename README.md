@@ -41,6 +41,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_aarch64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5117&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ffnvcodec-headers-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>win_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5117&branchName=main">
@@ -178,7 +185,4 @@ Feedstock Maintainers
 
 * [@hmaarrfk](https://github.com/hmaarrfk/)
 * [@sdvillal](https://github.com/sdvillal/)
-
-
-<!-- dummy commit to enable rerendering -->
 
